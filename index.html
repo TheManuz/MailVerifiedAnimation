@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="7VmV6hjT/sHLOr9v+E65EMjKe2mitqs8WUkIyPamjgyb+h6EYSaAWX6j4otVWklSz2UA0jJCwb9OpQ9ov1etnQ==">
+<html lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>SVG Mail Verified Animation</title>
-  <script type="text/javascript" src="smil-in-javascript.js"></script>
-</head>
+	<title>SVG Mail Verified Animation</title>
+	</head>
 
-<body>
-  <object type="image/svg+xml" data="mail_verified.svg">
-    Email verified! <!-- fallback image in CSS -->
-  </object>
-</body>
+	<body>
+		<!--<object type="image/svg+xml" data="mail_verified_static_css.svg" id="svg">Email verified!</object>-->
+
+		<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <title>Email verificata</title>
+		    <desc>una lettera con un marchio di approvazione</desc>
+		    <style>
+		        #mail_body {
+		            fill: #E7F0F5;
+		        }
+		        #mail_shadow {
+		            fill: #004B70;
+		            opacity: 0.05;
+		        }
+		        #mail_top {
+		            fill: #EBF6FB;
+		        }
+		        #mail_top_border_fat {
+		            fill: #BFDBE5;
+		        }
+		        #mail_top_border_thin {
+		            fill: #92C8D6;
+		        }
+		        #verify_ring {
+		            stroke: #19AB4B;
+		            stroke-dasharray: 403 403;
+		            stroke-dashoffset: 0;
+		            stroke-width: 8;
+		            stroke-opacity: 0.66;
+		            fill-opacity: 0.0;
+		        }
+		        #verify_check {
+		            stroke: #19AB4B;
+		            stroke-dasharray: 92 92;
+		            stroke-dashoffset: 0;
+		            stroke-width: 8;
+		            fill-opacity: 0;
+		            stroke-opacity: 0.66;
+		        }
+		    </style>
+		    <defs>
+		        <path id="mail_top_path" d="M0.157001562,63.598126 L180,176 L360,63.5 L360,36 C360,16.11 343.89,0 324,0 L36,0 C16.11,0 0.18,16.11 0.18,36 L0.157001562,63.598126 Z" />
+		    </defs>
+		  
+		    <ellipse id="bg_circle" fill="#EB4C00" cx="240" cy="240" rx="240" ry="240" ></ellipse>
+
+		        <g id="mail_group" >
+		                
+		            <rect id="mail_body" x="0" y="0" width="360" height="288" rx="36" />
+		            <path id="mail_shadow" d="M346.53273,280.082956 L180,176 L359.525271,30.1357171 C359.837597,32.0440524 360,34.0029734 360,36 L360,252 C360,263.359577 354.745271,273.486202 346.53273,280.082956 Z" />
+		            <use id="mail_top" xlink:href="#mail_top_path" />
+		            <polygon id="mail_top_border_fat" points="360 63.5 180 176 0.157001562 63.598126 0.176645458 40.0254506 180 152.415047 360 39.9150472 360 63.5" />
+		            <polygon id="mail_top_border_thin" points="360 63.5 180 176 0.157001562 63.598126 0.160930341 58.8835909 180 171.283009 360 58.7830094 360 63.5" />
+		            
+		            <!-- RING OUTSIDE THE CHECKMARK -->
+		            <circle id="verify_ring" transform="translate(280 208) rotate(-45)" cx="0" cy="0" r="64" ></circle>
+
+		            <!-- CHECKMARK -->
+		            <polyline id="verify_check" points="313.186279 184.83783 268.236389 230.302795 248.819885 210.656921"></polyline>
+		        </g>
+		</svg>
+
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
 </html>
