@@ -13,7 +13,7 @@ tl3 = new TimelineMax({ paused: false });
 tl1.set([bg_circle], {scaleX:1, scaleY: 0.98, transformOrigin:"center center"});
 tl1.set([verify_ring], {strokeDashoffset:"403"});
 tl1.set([verify_check], {strokeDashoffset:"92"});
-tl1.set([mail_group], {x:60, y:96, scale: 0, visibility: visible, transformOrigin:"center center"});
+tl1.set([mail_group], {x:60, y:96, scale: 0, opacity: 1, transformOrigin:"center center"});
 
 tl3.set([mail_group], {rotation:-1, transformOrigin:"center center"});
 
