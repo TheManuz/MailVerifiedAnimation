@@ -17,12 +17,13 @@
 
 	</head>
 
-	<body>
-		
-		<div class="container">
-				<!--<object type="image/svg+xml" data="mail_verified_static_css.svg" id="svg">Email verified!</object>-->
+	<body ng-app="firstApplication" layout="column" layout-align="center center">
 
-				<svg id="mail_verified_graphic" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<div layout="column">
+			<!--<object type="image/svg+xml" data="mail_verified_static_css.svg" id="svg">Email verified!</object>-->
+			<div layout="row">
+				<!--<img flex="60" flex-offset="20" src="mail_verified.png" class="debug_bg_white svg_center" />-->
+				<svg flex="90" flex-offset="5" flex-gt-xs="100" flex-offset-gt-xs="0" class="svg_center" height="480" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <title>Email verificata</title>
 				    <desc>una lettera con un marchio di approvazione</desc>
 				    <style>
@@ -76,16 +77,17 @@
 				            <polygon id="mail_top_border_fat" points="360 63.5 180 176 0.157001562 63.598126 0.176645458 40.0254506 180 152.415047 360 39.9150472 360 63.5" />
 				            <polygon id="mail_top_border_thin" points="360 63.5 180 176 0.157001562 63.598126 0.160930341 58.8835909 180 171.283009 360 58.7830094 360 63.5" />
 				            
-				            <!-- RING OUTSIDE THE CHECKMARK -->
 				            <circle id="verify_ring" transform="translate(280 208) rotate(-45)" cx="0" cy="0" r="64" ></circle>
 
-				            <!-- CHECKMARK -->
 				            <polyline id="verify_check" points="313.186279 184.83783 268.236389 230.302795 248.819885 210.656921"></polyline>
 				        </g>
 				</svg>
-
-				<p id="mail_verified_text">la tua email è stata verificata</p>
 			</div>
+
+			<div ng-cloak>
+				<p id="mail_verified_text" class="">la tua email è stata verificata</p>
+			</div>
+		</div>
 
 		<!-- Angular Material requires Angular.js Libraries -->
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -100,7 +102,7 @@
 
 		<script src='js/jquery-3.1.1.min.js'></script>
 		<script src="js/TweenMax.1.19.0.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/mail-verified-animation.js"></script>
 
 	</body>
 </html>
