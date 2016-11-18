@@ -7,8 +7,11 @@ body {
 	background-color: #EF7018;
 }
 
-#mail_verified_text {
+p {
     font-family: WebLysleekUI;
+}
+
+#mail_verified_text {
     font-size: 1.5em;
     width: 100%;
     text-align: center;

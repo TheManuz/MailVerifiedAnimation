@@ -17,13 +17,15 @@
 
 	</head>
 
-	<body ng-app="firstApplication" layout="column" layout-align="center center">
+	<body ng-app="firstApplication" layout="row" layout-align="center start" layout-align-gt-xs="center center">
 
-		<div layout="column">
+		<div layout="column" layout-align="center center">
 			<!--<object type="image/svg+xml" data="mail_verified_static_css.svg" id="svg">Email verified!</object>-->
-			<div layout="row">
+				<img src="img/droppay_logo_full.svg" onerror="this.onerror=null; this.src='droppay_logo_full.png'" height="128" />
+
+			<div layout="row" flex="10">
 				<!--<img flex="60" flex-offset="20" src="mail_verified.png" class="debug_bg_white svg_center" />-->
-				<svg flex="90" flex-offset="5" flex-gt-xs="100" flex-offset-gt-xs="0" class="svg_center" height="480" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<svg flex="70" flex-offset="15" flex-gt-xs="100" flex-offset-gt-xs="0" height="360px" viewBox="-16 -16 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <title>Email verificata</title>
 				    <desc>una lettera con un marchio di approvazione</desc>
 				    <style>
@@ -84,9 +86,7 @@
 				</svg>
 			</div>
 
-			<div ng-cloak>
 				<p id="mail_verified_text" class="">la tua email è stata verificata</p>
-			</div>
 		</div>
 
 		<!-- Angular Material requires Angular.js Libraries -->
