@@ -12,7 +12,7 @@ bg_circle_appear_timeline = new TimelineMax({ paused: false });
 mail_appear_timeline = new TimelineMax({ paused: false });
 
 //Initial setup
-mail_appear_timeline.set([bg_circle], {scale: 0, transformOrigin:"center center"});
+mail_appear_timeline.set([bg_circle], {scale: 0, fillOpacity: 1, transformOrigin:"center center"});
 mail_appear_timeline.set([verify_ring], {strokeDashoffset:"403"});
 mail_appear_timeline.set([verify_check], {strokeDashoffset:"92"});
 mail_appear_timeline.set([mail_group], {x:60, y:96, scale: 0, opacity: 1, transformOrigin:"center center"});
